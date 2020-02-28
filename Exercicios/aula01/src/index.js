@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import OlaMundo from './components/OlaMundo'
+import Estudante from './components/Estudante'
+
+//Aula 01:
+//Exemplos:
 const root = document.getElementById('root') //cod vindo do index.html
-/*
-//ReactDOM.render('Olá mundo!', root)
+
+ReactDOM.render('Olá mundo!', root)
 
 //JSX
 ReactDOM.render(<h1>Olá mundo</h1>, root); 
@@ -14,11 +19,11 @@ let texto = document.createTextNode("Olá mundo!")
 h2.appendChild(texto)
 
 root.appendChild(h2)
-*/
 
-//EXERCÍCIO
+
+//EXERCÍCIO:
 ReactDOM.render(<h1>EXERCÍCIO</h1>, root);
-/*
+
 //1) Sem JSX:
 let ul = document.createElement('ul')
 let li1 = document.createElement('li')
@@ -32,7 +37,7 @@ let texto2 = document.createTextNode('2-) Batman')
 
 ul.appendChild(li2)
 li2.appendChild(texto2)
-
+h1
 let li3 = document.createElement('li')
 let texto3 = document.createTextNode('3-) Wonder Woman')
 
@@ -40,7 +45,7 @@ ul.appendChild(li3)
 li3.appendChild(texto3)
 
 root.appendChild(ul)
-*/
+
 //2) Com JSX:
 
 ReactDOM.render(<ul>
@@ -48,4 +53,12 @@ ReactDOM.render(<ul>
                     <li>2-) Batman</li>
                     <li>3-) Wonder Woman</li>
                 </ul>, root)
+
+//Aula 02:
+//Exemplos:
+ReactDOM.render(<OlaMundo nome='Érica'/>, root)
+
+//EXERCÍCIO:
+ReactDOM.render(<Estudante nome='Érica Sousa' idade={21} curso='Sistemas de informação' cidadeNatal='Boa Viagem'/>, root)
+
 
