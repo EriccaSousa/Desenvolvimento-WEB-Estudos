@@ -50,7 +50,9 @@ export default ()=>
 
                     <div>
                         <h3><li>Componentes - Relação HardCoded</li></h3>
-                        <div class="ex03-02"><Casa/></div>
+                        <div class="ex03-02">
+                            <Casa/>
+                        </div>
                     </div>
             </div>
 
