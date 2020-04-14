@@ -30,6 +30,10 @@ form input{
     padding: 0 24px;
 }
 
+ul{
+    list-style-type: none;
+}
+
 form textarea{
     width: 100%;
     resize: vertical;
