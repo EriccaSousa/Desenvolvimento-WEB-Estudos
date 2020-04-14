@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- Define documento HTML5-->
+<html lang="pt-BR"> <!--'lang': idioma-->
+
+    <head><!--Contêm metadados-->
+        <title>Minha primeira página HTML</title>
+        <meta charset="UTF-8">
+    </head>
+        
+    <body> <!-- Parte visível -->
+        <h1>Atributos</h1>
+        <p>O atributo HTML é usado para definir estilos iguais para elementos com o mesmo nome de classe.</p>
+
+        <style>
+            .cities {
+              background-color: black;
+              color: white;
+              margin: 20px;
+              padding: 20px;
+            }
+            </style>
+        
+        <div class="cities">
+            <h2>Londres</h2>
+            <p>Londres é a capital da Inglaterra.</p>
+          </div>
+        
+          <div class="cities">
+            <h2>Paris</h2>
+            <p>Paris é a capital da França.</p>
+          </div>
+        
+          <div class="cities">
+            <h2>Tóquio</h2>
+            <p>Tóquio é a capital do Japão.</p>
+        </div>
+
+        <h2>Atributo id</h2>
+        <p>O valor do ID pode ser usado por CSS e JavaScript para executar determinadas tarefas para um elemento exclusivo com o valor do ID especificado. No CSS, para selecionar um elemento com um ID específico, escreva um caractere de hash (#), seguido pelo ID do elemento:</p>
+        
+        <style>
+            #myHeader {
+              background-color: lightblue;
+              color: black;
+              padding: 40px;
+              text-align: center;
+            }
+            </style>
+        
+            <h1 id="myHeader">Meu cabeçalho</h1>
+        
+            <h2>Diferença entre classe e id</h2>
+            <p>Um elemento HTML pode ter apenas um ID exclusivo que pertença a esse único elemento, enquanto um nome de classe pode ser usado por vários elementos:</p>
+            <style>
+                /* Estilize o elemento com o id "myHeader" */
+                #myHeader {
+                  background-color: lightblue;
+                  color: black;
+                  padding: 40px;
+                  text-align: center;
+                }
+            
+                /* Estilize todos os elementos com o nome da classe "city" */
+                .city {
+                  background-color: tomato;
+                  color: white;
+                  padding: 10px;
+                }
+                </style>
+            
+                <!--Um elemento único -->
+                <h1 id="myHeader">Cidades</h1>
+            
+                <!-- Vários elementos semelhantes -->
+                <h2 class="city">Londres</h2>
+                <p>Londres é a capital da Inglaterra.</p>
+            
+                <h2 class="city">Paris</h2>
+                <p>Paris é a capital da França.</p>
+            
+                <h2 class="city">Tóquio</h2>
+                <p>Tóquio é a capital do Japão.</p>
+    </body>
+</html>
