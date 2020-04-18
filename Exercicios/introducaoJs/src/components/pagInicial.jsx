@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import Estudante from './Estudante'
-import Professor from './Professor'
-import Casa from './Casa'
-import {CapitaoAmerica,ViuvaNegra} from './Vingadores'
-import Pai from './Pai'
-import MinhaClasse from './MinhaClasse'
-import CidadeSimples from './CidadeSimples'
+import Estudante from './Estudante';
+import Professor from './Professor';
+import Casa from './Casa';
+import {CapitaoAmerica,ViuvaNegra} from './Vingadores';
+import Pai from './Pai';
+import MinhaClasse from './MinhaClasse';
+import CidadeSimples from './CidadeSimples';
+import Contador from '../hooks/contador';
 
 export default ()=>
     <>
@@ -78,6 +79,12 @@ export default ()=>
                 <h3><li>Aula 02: Componentes: State</li></h3>
                 
                 <CidadeSimples/>
+            </div>
+
+            <div class="aula01">
+                <h3><li>Aula 03: React Hooks</li></h3>
+                
+                <Contador/>
             </div>
 
         </div>
