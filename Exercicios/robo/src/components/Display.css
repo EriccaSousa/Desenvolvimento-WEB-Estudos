@@ -1,0 +1,12 @@
+.display{
+    grid-column: span 2;/*Ocupar 2 colunas*/
+    background-color: #0004;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.7em;
+    overflow: hidden;
+}

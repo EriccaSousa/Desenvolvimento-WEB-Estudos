@@ -1,0 +1,18 @@
+@font-face{
+  font-family: 'RobotoMono';
+  src: url('./fonts/RobotoMono-Thin.ttf');
+}/*Criando a fonte*/
+
+*{
+  font-family: 'RobotoMono', monospace;
+}/* Todas as classes usaram essa fonte*/
+
+body {
+  display: flex;/*Organização dos elementos html*/
+  height: 100vh; /*usar toda a altura do navegador*/
+  justify-content: center; /*Alinhamento horizontal*/
+  align-items: center; /*Alinhamento vertical*/
+  text-align: center; /*Alinhamento horizontal*/
+  color: #fff;
+  background-color: #c0c0c0;
+}

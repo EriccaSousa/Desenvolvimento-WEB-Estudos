@@ -1,0 +1,10 @@
+.robo{
+    height: 410px;
+    width: 240px;
+    border-radius: 5px;
+    overflow: hidden; /*esconder tudo que transborda a classe*/
+    background-color: azure;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 50px, 50px, 50px;
+}
