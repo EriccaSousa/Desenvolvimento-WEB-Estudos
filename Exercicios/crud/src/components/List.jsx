@@ -1,54 +1,58 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import axios from 'axios'
 
-import TableRow from './TableRow';
+import TableRow from './TableRow'
 
 export default class List extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = { estudantes: [] };
-
-        this.apagarElementoPorId = this.apagarElementoPorId.bind(this)    }
+        super(props)
+        this.state = { estudantes: [] }
+        this.apagarElementoPorId = this.apagarElementoPorId.bind(this)
+    }
 
     componentDidMount() {
-        axios.get("http://localhost:3001/estudantes")
+        axios.get('http://localhost:3002/estudantes/list') //express
+            //axios.get('http://localhost:3001/estudantes') //json-server
             .then(
                 (res) => {
-                    //console.log(res.data);
-                    this.setState({ estudantes: res.data });
+                    //console.log(res.data)
+                    this.setState({ estudantes: res.data })
+                    //console.log(this.state.estudantes)
                 }
             )
             .catch(
                 (error) => {
-                    console.log(error);
+                    console.log(error)
                 }
             )
     }
 
     montarTabela() {
-        if (!this.state.estudantes) return;
+        if (!this.state.estudantes) return
         return this.state.estudantes.map(
             (est, i) => {
-                return <TableRow estudante={est} key={i} apagarElementoPorId={this.apagarElementoPorId} />
+                return <TableRow estudante={est}
+                    key={i}
+                    apagarElementoPorId={this.apagarElementoPorId} />
             }
         )
     }
 
     apagarElementoPorId(id) {
-        let estudantesTemp = this.state.estudantes
-        for (let i = 0; i < estudantesTemp.length; i++) {
-            if (estudantesTemp[i].id === id) {
-                estudantesTemp.splice(i, 1)
+        let tempEstudantes = this.state.estudantes
+        for (let i = 0; i < tempEstudantes.length; i++) {
+            if (tempEstudantes[i]._id === id) {
+                tempEstudantes.splice(i, 1)
             }
         }
-        this.setState({ estudantes: estudantesTemp })
+        this.setState({ estudantes: tempEstudantes })
     }
 
     render() {
         return (
-            <div>
-                <h3>List Estudante</h3>
+            <div style={{ marginTop: 10 }}>
+                <h3>Listar Estudantes</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                     <thead>
                         <tr>
@@ -56,15 +60,17 @@ export default class List extends Component {
                             <th>Nome</th>
                             <th>Curso</th>
                             <th>IRA</th>
-                            <th />
-                            <th />
+                            <th colSpan="2"></th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.montarTabela()}
                     </tbody>
+
                 </table>
+
+
             </div>
-        );
+        )
     }
 }
