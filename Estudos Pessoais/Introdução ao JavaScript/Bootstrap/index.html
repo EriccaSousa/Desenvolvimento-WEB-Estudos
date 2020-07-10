@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script language="javascript" src="script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <title>Aprendendo Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Tabelas</h2>
+        <table class="table table-hover">
+            <tr>
+                <th>#</th>
+                <th>Cursos</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bootstrap</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HTML</td>
+            </tr>
+        </table>
+
+        <h2>Popovers</h2>
+        <!--Topo-->
+        <button class="btn btn-primary" data-toggle="popover" title="Título do popover"
+            data-content="Aqui é o conteúdo do meu popover" data-placement="top">Meus
+            popovers</button>
+        <!--Direita-->
+
+        <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteúdo do meu popover">Meus
+            popovers</button>
+        <!--Esquerda Padrão-->
+        <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteúdo do meu popover"
+            data-placement="left">Meus
+            popovers</button>
+        <!--Baixo-->
+        <button class="btn btn-primary" data-toggle="popover" data-content="Aqui é o conteúdo do meu popover"
+            data-placement="bottom">Meus
+            popovers</button>
+
+
+        <h2>Tooltips</h2>
+        <button class="btn btn-success" data-toggle="tooltip" title="Meu primeiro tooltip">Meu tooltip</button>
+
+        <h2>Modais</h2>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">Ativar modal</button>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">Ativar modal 2</button>
+
+        <!--Modal-->
+        <div id="conteudoModal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!--Título-->
+                    <div class="modal-header">
+                        <h4>Meu modal</h4>
+                        <button class="close" data-dismiss="modal" arial-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--Conteudo-->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6" style="background-color: blue;">
+                                Texto do meu modal parte 1.
+                            </div>
+                            <div class="col-6">
+                                Texto do meu modal parte 2.
+                            </div>
+                        </div>
+                    </div>
+                    <!--Conteudo-->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Modal Dinâmico</h2>
+        <button class="btn btn-secondary" data-nome="Letícia" data-toggle="modal" data-target="#conteudoModal2">Mensagem
+            para Letícia</button>
+
+        <button class="btn btn-secondary" data-nome="Marcus" data-toggle="modal" data-target="#conteudoModal2">Mensagem
+            para Marcus</button>
+
+        <!--Modal-->
+        <div id="conteudoModal2" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!--Título-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Meu modal</h4>
+                        <button class="close" data-dismiss="modal" arial-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--Conteudo-->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <span>Destinatário: </span>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" name="para" class="form-control">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-4">
+                                <span>Mensagem: </span>
+                            </div>
+                            <div class="col-8">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Conteudo-->
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Collapse</h2>
+        <button class="btn btn-warning" data-toggle="collapse" data-target="#secreto">Mostre mais</button>
+
+        <div class="collapse" id="secreto">
+            Mensagem secreta.
+        </div>
+
+        <h2>Scrollspy</h2>
+
+        <div class="row">
+            <div class="col-4">
+                <div id="livro" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#c1">Capítulo 1</a>
+                    <a class="list-group-item list-group-item-action" href="#c2">Capítulo 2</a>
+                    <a class="list-group-item list-group-item-action" href="#c3">Capítulo 3</a>
+                    <a class="list-group-item list-group-item-action" href="#c4">Capítulo 4</a>
+                    <a class="list-group-item list-group-item-action" href="#c5">Capítulo 5</a>
+                </div>
+            </div>
+
+            <div class="col-8" id="caixaLivro" style="position: relative; height: 500px; overflow: auto;">
+                <div data-spy="scroll" data-target="#livro" data-offset="0">
+                    <h3 id="c1">Capítulo 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a pretium nisi. Nullam pulvinar
+                        quam in mi
+                        auctor viverra. Cras ut sollicitudin erat, at mollis dui. Suspendisse nec dui mi. Nulla
+                        eleifend
+                        condimentum pretium. Donec arcu magna, porttitor eu feugiat ac, rhoncus et leo. Phasellus
+                        dui felis,
+                        tincidunt vel tempor non, scelerisque sed orci. Sed id justo ut purus ornare pretium. Proin
+                        placerat
+                        nulla eget tortor vehicula hendrerit.</p>
+                </div>
+                <div data-spy="scroll" data-target="#livro" data-offset="0">
+                    <h3 id="c2">Capítulo 2</h3>
+                    <p>Quisque erat orci, auctor id aliquet nec, pretium sed felis. Curabitur blandit sem id justo
+                        tristique
+                        tincidunt. Nam a arcu tempor, tincidunt nibh ut, aliquam ligula. Praesent at condimentum
+                        risus.
+                        Suspendisse aliquet euismod ligula, ac semper nulla auctor dictum. Vestibulum ut faucibus
+                        arcu. Donec et
+                        orci hendrerit, aliquet nunc lobortis, dapibus sapien. Suspendisse sit amet ligula dictum,
+                        finibus erat
+                        ut, malesuada mi. Curabitur accumsan ligula vel nisl rhoncus, eu porttitor quam consectetur.
+                        Nullam
+                        aliquam lacinia libero, consectetur pulvinar ligula varius in. Aliquam id lacus ac mauris
+                        tincidunt
+                        finibus eu et ligula. Quisque semper quis quam a commodo. Vestibulum at vehicula augue, eu
+                        gravida ante.
+                    </p>
+                </div>
+                <div data-spy="scroll" data-target="#livro" data-offset="0">
+                    <h3 id="c3">Capítulo 3</h3>
+                    <p>Suspendisse risus elit, congue sed metus quis, pulvinar consequat nisl. Vestibulum auctor est
+                        sed mauris
+                        sagittis, at feugiat enim porta. Aenean pharetra nibh quis pellentesque faucibus. Praesent
+                        auctor, ipsum
+                        at volutpat tincidunt, diam risus gravida lectus, ut hendrerit libero libero ut nunc. Proin
+                        bibendum
+                        diam sit amet mauris dapibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aenean
+                        nec velit felis. Maecenas porta diam id augue fermentum tincidunt.
+                    </p>
+                </div>
+                <div data-spy="scroll" data-target="#livro" data-offset="0">
+                    <h3 id="c4">Capítulo 4</h3>
+                    <p>Etiam augue risus, pretium eu dictum vitae, scelerisque eu nibh. Etiam fermentum congue velit
+                        eget
+                        facilisis. Donec eget efficitur purus, non dapibus purus. Aenean lacinia nulla eget
+                        facilisis viverra.
+                        Quisque fringilla suscipit sem, nec congue ligula maximus sit amet. Praesent eu mattis
+                        purus, et rhoncus
+                        mauris. Sed nec sodales odio. Ut pellentesque leo sed efficitur lobortis. Integer feugiat a
+                        nunc ut
+                        aliquam. Praesent et libero sed elit porta tincidunt.
+                        Etiam augue risus, pretium eu dictum vitae, scelerisque eu nibh. Etiam fermentum congue velit
+                        eget
+                        facilisis. Donec eget efficitur purus, non dapibus purus. Aenean lacinia nulla eget
+                        facilisis viverra.
+                        Quisque fringilla suscipit sem, nec congue ligula maximus sit amet. Praesent eu mattis
+                        purus, et rhoncus
+                        mauris. Sed nec sodales odio. Ut pellentesque leo sed efficitur lobortis. Integer feugiat a
+                        nunc ut
+                        aliquam. Praesent et libero sed elit porta tincidunt.
+                        Praesent et libero sed elit porta tincidunt.
+                        Etiam augue risus, pretium eu dictum vitae, scelerisque eu nibh. Etiam fermentum congue velit
+                        eget
+                        facilisis. Donec eget efficitur purus, non dapibus purus. Aenean lacinia nulla eget
+                        facilisis viverra.
+                        Quisque fringilla suscipit sem, nec congue ligula maximus sit amet. Praesent eu mattis
+                        purus, et rhoncus
+                        mauris. Sed nec sodales odio. Ut pellentesque leo sed efficitur lobortis. Integer feugiat a
+                        nunc ut
+                        aliquam. Praesent et libero sed elit porta tincidunt.
+                    </p>
+                </div>
+                <div data-spy="scroll" data-target="#livro" data-offset="0">
+                    <h3 id="c5">Capítulo 5</h3>
+                    <p>Morbi malesuada et nunc eget eleifend. Suspendisse potenti. Quisque eu blandit ligula, id
+                        facilisis ante.
+                        Sed non interdum orci. Donec risus mi, condimentum vel magna sagittis, condimentum euismod
+                        nulla. Nullam
+                        arcu diam, cursus ac sapien ut, interdum lobortis ligula. Etiam iaculis quam sed massa
+                        convallis, ac
+                        semper urna rutrum.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Carousel</h2>
+        <div id="meu_slideshow" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/natureza1.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/natureza2.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/natureza3.jpg">
+                </div>
+            </div>
+
+            <a href="#meu_slideshow" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a href="#meu_slideshow" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <!-- JAVASCRIPT -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+
+            $('#conteudoModal2').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var recipient = button.data('nome');
+                var modal = $(this);
+                modal.find('.modal-title').text('Mensagem para ' + recipient);
+                modal.find('.modal-body input').val(recipient);
+            });
+
+            $('#caixaLivro').scrollspy({ target: "#livro" });
+        </script>
+
+    </footer>
+</body>
+
+</html>
