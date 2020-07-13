@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício 03</title>
+
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <footer>
+        <script>
+
+            var num1 = parseFloat(prompt("Informe um valor: "));
+            var operacao = prompt("informe a operacão: ");
+            var num2 = parseFloat(prompt("informe o outro valor: "));
+
+            function calculoAritmetico(num1, num2, operacao) {
+                if (operacao === 'soma') {
+                    return num1 + num2;
+                } else if (operacao === 'subtracao') {
+                    return num1 - num2;
+                } else {
+                    return 'Operação inválida.'
+                }
+            }
+
+            document.write("O resultado é: " + calculoAritmetico(num1, num2, operacao));
+        </script>
+    </footer>
+</body>
+
+</html>
