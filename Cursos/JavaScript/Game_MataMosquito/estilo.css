@@ -5,6 +5,7 @@ html {
 body {
     background-image: url(imagens/bg.jpg);
     background-repeat: no-repeat;
+    background-size: 2000px 1000px;
 }
 
 .mosquito1 {
