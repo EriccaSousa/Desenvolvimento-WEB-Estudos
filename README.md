@@ -1,5 +1,3 @@
-<img src="https://img.shields.io/static/v1?label=Blog&message=Rocketseat&color=7159c1&style=?style=flat&logo=appveyor"/>
-
 <h1 align="center">Desenvolvimento-WEB-Estudos</h1>
 
 <p align="center">
